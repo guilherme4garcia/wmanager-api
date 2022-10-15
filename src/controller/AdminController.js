@@ -7,7 +7,7 @@ const Sequelize = require('sequelize')
 const secret = 'segredo'
 
 class AdminController {
-  async create(req, res) {
+  async signup(req, res) {
     const hashedPassword = await bcrypt.hash(req.body.password, 10)
 
     try {
@@ -21,10 +21,14 @@ class AdminController {
       const token = jwt.sign({ id: user.uuid }, secret, {
         expiresIn: '15m'
       })
-      console.log(token)
-      res.status(201).send(user)
+
+      const { uuid, name, email, admin } = user
+
+      const newUser = { uuid, name, email, admin, token }
+
+      res.status(201).send(newUser)
     } catch (error) {
-      res.send(error)
+      res.status(400).send(error)
       console.log(error)
     }
   }

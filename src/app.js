@@ -18,6 +18,9 @@ app.use('/', hello)
 const admin = require('./routes/Admin.routes')
 app.use('/', admin)
 
+const user = require('./routes/User.routes')
+app.use('/', user)
+
 /* 
 
 

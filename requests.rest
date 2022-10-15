@@ -9,10 +9,10 @@ POST {{HOST}}/signup HTTP/1.1
 Content-Type: application/json
 
 {
-  "name": "Teste",
-  "email": "jtmls@teste",
+  "name": "Guilherme",
+  "email": "guilherme@teste",
   "password": "1234test",
-  "admin": "0"
+  "admin": "1"
 }
 
 ### LOGIN
@@ -20,7 +20,7 @@ POST {{HOST}}/login HTTP/1.1
 Content-Type: application/json
 
 {
-  "login": "jtmls",
+  "email": "guilherme@teste",
   "password": "1234test"
 }
 
