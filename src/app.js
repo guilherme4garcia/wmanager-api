@@ -15,9 +15,11 @@ app.use('/admin', admin)
 const hello = require('./routes/Hello.routes.js')
 app.use('/', hello)
 
-/* 
 const admin = require('./routes/Admin.routes')
 app.use('/', admin)
+
+/* 
+
 
 const login = require('./routes/Usuario.routes')
 app.use('/', login)

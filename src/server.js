@@ -1,7 +1,6 @@
 require('dotenv').config()
 const app = require('./app')
-//const db = require('./database/mongodb')
-
+const database = require('./database/connection')
 const PORT = process.env.PORT || 3002
 const HOST = '0.0.0.0'
 

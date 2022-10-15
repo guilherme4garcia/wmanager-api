@@ -1,18 +1,26 @@
-const { Sequelize } = require('sequelize')
+const Sequelize = require('sequelize')
+require('dotenv')
 
-// Option 1: Passing a connection URI
-const sequelize = new Sequelize('postgres://user:pass@example.com:5432/dbname') // Example for postgres
+const URL_BD = process.env.DB_URL /// database url
 
-/* const mysql = require('mysql')
-require('dotenv/config')
+// Realiza conexão com o Cloud BD ElephantSQL
 
-const connection = mysql.createConnection({
-  host: process.env.DB_HOST,
-  port: process.env.DB_PORT,
-  user: process.env.DB_USER,
-  password: process.env.DB_CONNECTION,
-  database: 'wmanager'
-})
+let database = null
+try {
+  database = new Sequelize(URL_BD, {
+    logging: false
+  })
 
-module.exports = connection
- */
+  database
+    .authenticate()
+    .then(() => {
+      console.log('Conexão realizada com o SGBD')
+    })
+    .catch(error => {
+      console.error('Não foi possível conectar com o SGBD:', error.message)
+    })
+} catch (e) {
+  console.log(e.message)
+}
+
+module.exports = database

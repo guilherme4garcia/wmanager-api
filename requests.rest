@@ -1,5 +1,5 @@
 ### ___________________________________________________________________________________
-@HOST=http://localhost:3000
+@HOST=http://localhost:3001
 ### ___________________________________________________________________________________
 
 GET {{HOST}}/ HTTP/1.1
@@ -9,10 +9,10 @@ POST {{HOST}}/signup HTTP/1.1
 Content-Type: application/json
 
 {
-  "name": "joao",
-  "login": "jtmls",
+  "name": "Teste",
+  "email": "jtmls@teste",
   "password": "1234test",
-  "equipment": ["BMW", "Ferrari"]
+  "admin": "0"
 }
 
 ### LOGIN
