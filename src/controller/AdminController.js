@@ -18,15 +18,7 @@ class AdminController {
         admin: req.body.admin
       })
 
-      const token = jwt.sign({ id: user.uuid }, secret, {
-        expiresIn: '15m'
-      })
-
-      const { uuid, name, email, admin } = user
-
-      const newUser = { uuid, name, email, admin, token }
-
-      res.status(201).send(newUser)
+      res.status(201).send('created')
     } catch (error) {
       res.status(400).send(error)
       console.log(error)
