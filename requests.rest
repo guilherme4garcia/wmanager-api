@@ -9,8 +9,8 @@ POST {{HOST}}/signup HTTP/1.1
 Content-Type: application/json
 
 {
-  "name": "Joao",
-  "email": "joao@teste",
+  "name": "Guilherme",
+  "email": "guilherme@teste",
   "password": "1234test",
   "admin": "1"
 }
@@ -29,15 +29,15 @@ GET {{HOST}}/users HTTP/1.1
 Content-Type: application/json
 
 ### DELETE A USER
-DELETE  {{HOST}}/id/512abcc0-4d93-11ed-9342-1d5b10b95567 HTTP/1.1
+DELETE  {{HOST}}/id/43084c00-5001-11ed-8456-11cc6393d037 HTTP/1.1
 Content-Type: application/json
 
 ### LIST SINGLE USER
-GET  {{HOST}}/user/612312 HTTP/1.1
+GET  {{HOST}}/user/957e7c30-5000-11ed-8456-11cc6393d037 HTTP/1.1
 Content-Type: application/json
 
 ### UPDATE A USER
-PUT {{HOST}}/id/b4120 HTTP/1.1
+PUT {{HOST}}/id/957e7c30-5000-11ed-8456-11cc6393d037 HTTP/1.1
 Content-Type: application/json
 
 {
