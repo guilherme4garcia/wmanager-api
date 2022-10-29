@@ -1,0 +1,45 @@
+[
+  {
+    "name": "Guilherme Garcia",
+    "email": "guilherme@teste.com",
+    "password": "1234test",
+    "admin": true
+
+  },
+  {
+    "name": "João Silva",
+    "email": "joao@teste.com",
+    "password": "1234test",
+    "admin": false
+
+  },
+  {
+    "name": "Ana Maria",
+    "email": "ana@teste.com",
+    "password": "1234test",
+    "admin": false
+
+  },
+  {
+    "name": "Pedro Santos",
+    "email": "pedro@teste.com",
+    "password": "1234test",
+    "admin": false
+
+  },
+  {
+    "name": "Gilberto Barros",
+    "email": "gilberto@teste.com",
+    "password": "1234test",
+    "admin": false
+
+  },
+  {
+    "name": "Arthur Aleixo",
+    "email": "arthur@teste.com",
+    "password": "1234test",
+    "admin": false
+
+  }
+  
+]
