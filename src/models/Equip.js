@@ -14,7 +14,7 @@ const Equip = database.define('Equip', {
     allowNull: false
   },
   user_id: {
-    type: Sequelize.UUID,
+    type: Sequelize.STRING,
     allowNull: true
   },
   dt_entrada: {
