@@ -1,0 +1,32 @@
+### ___________________________________________________________________________________
+@HOST=http://localhost:3001
+### ___________________________________________________________________________________
+
+GET {{HOST}}/ HTTP/1.1
+
+
+### GET ALL EQUIPS
+GET {{HOST}}/equips HTTP/1.1
+Content-Type: application/json
+
+### NEW EQUIP
+POST {{HOST}}/new-equip HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Gabinete",
+  "ambiente": "0"
+}
+
+### EQUIP 2 USER
+
+POST {{HOST}}/equip2user HTTP/1.1
+Content-Type: application/json
+
+{
+  "id":"662b6de0-57b6-11ed-88b8-9b66f896f27c",
+  "user_id":"",
+  "dt_saida": "0000-00-00", 
+  "ambiente": "2"
+}
+

@@ -13,17 +13,24 @@ const Equip = database.define('Equip', {
     type: Sequelize.STRING,
     allowNull: false
   },
-  dt_entrada: {
-    type: Sequelize.DATE,
+  user_id: {
+    type: Sequelize.STRING,
     allowNull: true
+  },
+  dt_entrada: {
+    type: Sequelize.DATEONLY,
+    defaultValue: Sequelize.DataTypes.NOW
   },
   dt_saida: {
-    type: Sequelize.DATE,
+    type: Sequelize.DATEONLY,
     allowNull: true
   },
-  
+  ambiente: {
+    type: Sequelize.STRING,
+    allowNull: true
+  }
 })
 
 Equip.sync()
-Equip.sync({ force: true }) /// recreate the table everytime
+//Equip.sync({ force: true }) /// recreate the table everytime
 module.exports = Equip

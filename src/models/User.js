@@ -29,5 +29,5 @@ const User = database.define('User', {
 })
 
 User.sync()
-User.sync({ force: true }) /// recreate the table everytime
+//User.sync({ force: true }) /// recreate the table everytime
 module.exports = User

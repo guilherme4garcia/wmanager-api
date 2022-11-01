@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Computador",
+    "ambiente": "Sala 21"
+    
+  },
+  {
+    "name": "Impressora",
+    "ambiente": "Sala 10"
+    
+  },
+  {
+    "name": "Mouse",
+    "ambiente": "Sala 5"
+    
+  },
+  {
+    "name": "Teclado",
+    "ambiente": "Sala 8"
+    
+  },
+  {
+    "name": "Notebook",
+    "ambiente": "Sala 2"
+    
+  }
+]
