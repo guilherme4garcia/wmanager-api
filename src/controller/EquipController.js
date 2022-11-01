@@ -26,6 +26,30 @@ class EquipController {
     }
   }
 
+  async changeAmbiente(req, res){
+    let id = req.body.id
+    let ambiente = req.body.ambiente
+
+    try {
+      const equip = await Equip.update(
+        {
+          ambiente: ambiente,
+        },
+        {
+          where: {
+            uuid: id
+          }
+        }
+      )
+
+      console.log(equip)
+      res.status(200).send(equip)
+    } catch (error) {
+      console.log(error)
+      res.sendStatus(500, error)
+    }
+  }
+
   async newEquip(req, res) {
     try {
       const equip = await Equip.create({

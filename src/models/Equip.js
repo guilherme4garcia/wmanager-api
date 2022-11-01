@@ -22,7 +22,7 @@ const Equip = database.define('Equip', {
     defaultValue: Sequelize.DataTypes.NOW
   },
   dt_saida: {
-    type: Sequelize.DATEONLY,
+    type: Sequelize.STRING,
     allowNull: true
   },
   ambiente: {
