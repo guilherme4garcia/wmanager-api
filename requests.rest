@@ -1,5 +1,5 @@
 ### ___________________________________________________________________________________
-@HOST=http://localhost:3001
+@HOST=http://0.0.0.0:3001
 ### ___________________________________________________________________________________
 
 GET {{HOST}}/ HTTP/1.1
@@ -20,7 +20,7 @@ POST {{HOST}}/login HTTP/1.1
 Content-Type: application/json
 
 {
-  "email": "joao@teste",
+  "email": "guilherme@teste.com",
   "password": "1234test"
 }
 
@@ -29,7 +29,7 @@ GET {{HOST}}/users HTTP/1.1
 Content-Type: application/json
 
 ### DELETE A USER
-DELETE  {{HOST}}/id/43084c00-5001-11ed-8456-11cc6393d037 HTTP/1.1
+DELETE  {{HOST}}/id/4384a840-5ad3-11ed-95b8-3786f2d06d1b HTTP/1.1
 Content-Type: application/json
 
 ### LIST SINGLE USER
