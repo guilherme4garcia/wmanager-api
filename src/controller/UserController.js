@@ -1,5 +1,6 @@
 require('dotenv').config()
 const User = require('../models/User.js')
+const Equip = require('../models/Equip')
 const jwt = require('jsonwebtoken')
 const Sequelize = require('sequelize')
 const authenticate = require('./authenticate')
@@ -35,6 +36,21 @@ class UserController {
     } catch (error) {
       console.log(error)
       res.status(401).send(error)
+    }
+  }
+
+  async list (req, res) {
+    const id = req.params.id
+    try {
+      const Equips = await Equip.findAll({ where: { user_id: id } })
+
+      if (Equip) {
+        res.status(200).send(Equips)
+      } else {
+        res.sendStatus(404)
+      }
+    } catch (error) {
+      res.sendStatus(400, error)
     }
   }
 }
