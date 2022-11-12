@@ -24,8 +24,8 @@ POST {{HOST}}/equip2user HTTP/1.1
 Content-Type: application/json
 
 {
-  "id":"01473b30-5ef4-11ed-bd54-d920d8ab1e5d",
-  "user_id":"010ec610-5ef4-11ed-bd54-d920d8ab1e5d",
+  "id":"37b2f880-62d7-11ed-9858-37ca75c1f485",
+  "user_id":"377e7b00-62d7-11ed-9858-37ca75c1f485",
   "dt_saida": "2022-03-15", 
   "ambiente": "2"
 }
