@@ -30,7 +30,9 @@ class EquipController {
     try {
       const equip = await Equip.create({
         name: req.body.name,
-        ambiente: req.body.ambiente
+        user_id: req.body.user_id,
+        ambiente: req.body.ambiente,
+        dt_saida: req.body.devolucao
       })
 
       res.status(201).send('created')
@@ -70,7 +72,6 @@ class EquipController {
       )
       console.log(equip)
       res.status(200).send(equip)
-      
     } catch (error) {
       console.log(error)
       res.sendStatus(500, error)
@@ -93,7 +94,6 @@ class EquipController {
       )
       console.log(equip)
       res.status(200).send(equip)
-      
     } catch (error) {
       console.log(error)
       res.sendStatus(500, error)
@@ -122,6 +122,22 @@ class EquipController {
       res.status(200).send(equip)
     } catch (error) {
       console.log(error)
+      res.sendStatus(500, error)
+    }
+  }
+
+  async deleteEquip(req, res) {
+    const id = req.params.id
+
+    try {
+      const user = await Equip.destroy({
+        where: {
+          uuid: id
+        },
+        force: true
+      })
+      res.sendStatus(200, user)
+    } catch (error) {
       res.sendStatus(500, error)
     }
   }

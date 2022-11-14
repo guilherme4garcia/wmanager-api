@@ -1,7 +1,16 @@
 const express = require('express')
 const router = express.Router()
 const EquipController = require('../controller/EquipController')
-const { update_equip_all, changeUser, removeEquip, userEquipList, update_equip, newEquip, list } = new EquipController()
+const {
+  deleteEquip,
+  update_equip_all,
+  changeUser,
+  removeEquip,
+  userEquipList,
+  update_equip,
+  newEquip,
+  list
+} = new EquipController()
 
 //CREATE NEW EQUIP
 router.post('/new-equip', newEquip)
@@ -16,12 +25,14 @@ router.get('/equips', list)
 router.get('/user/equips/:id', userEquipList)
 
 //REMOVER USER EQUIPMENT
-router.put('/user/equip/remove/:id', removeEquip)
+router.delete('/user/equip/remove/:id', removeEquip)
 
 //CHANGE USER
 router.put('/change-user', changeUser)
 
 //Update Equip All Params
 router.put('/update-user', update_equip_all)
+
+router.delete('/delete-equip/:id', deleteEquip)
 
 module.exports = router
